@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html{box-sizing: border-box}
+        *,*:after,*:before{box-sizing: inherit}
+        .block{height: 200px;width: 200px;background-color: #0b6fa2;border: 1px solid black}
+        .block ul{max-height: 0;overflow: hidden;color: white}
+        .block:hover ul{max-height: 500px;transition: .5s ease}
+
+
+        a[href^="http"]:empty::before {content: attr(href);color: #333333;}/*A标签内容和href一致*/
+        a{-webkit-mask-image: -webkit-gradient(linear, left top, left bottom,
+        from(rgba(0,0,0,0)), color-stop(50%, rgba(0,0,0,1)), to(rgba(0,0,0,0)));}/*字体渐变*/
+        .blur{color: transparent; text-shadow: 0 0 5px rgba(0,0,0,0.5);}/*字体模糊*/
+    </style>
+</head>
+
+<div class="block">
+    <ul>
+        <li>111</li>
+        <li>222</li>
+        <li>333</li>
+    </ul>
+</div>
+
+<p>
+    <a href="http://www.test.none"></a>
+</p>
+<p class="blur">testing</p>
+
+</body>
+</html>
